@@ -20,16 +20,6 @@ public class Sss extends HttpServlet implements Servlet {
         super.destroy();
         System.out.println("Sss:destroy");
     }
-    protected void service(HttpServletRequest rq, HttpServletResponse rs)
-            throws ServletException, IOException {
-        // обработка http-запроса
-        System.out.println("Sss:service:"+rq.getMethod());
-        PrintWriter var = rs.getWriter();
-        var.write("Sss: service: " + rq.getMethod() + "\n");
-        var.write("Server name: " + rq.getServerName() + "\n");
-        var.write("Addr: " + rq.getRemoteAddr() + " Port: " + rq.getRemotePort() + "\n\n");
-    }
-
     public void doGet(HttpServletRequest var1, HttpServletResponse var2) throws ServletException, IOException {
         System.out.println("Sss: doGet");
         PrintWriter var3 = var2.getWriter();
@@ -46,5 +36,30 @@ public class Sss extends HttpServlet implements Servlet {
         String var5 = var1.getParameter("lastname");
         var3.write("Sss: doPost\n");
         var3.write("firstname: " + var4 + " lastname: " + var5 + "\n");
+    }
+
+    protected void service(HttpServletRequest var1, HttpServletResponse var2) throws ServletException, IOException {
+        System.out.println("Sss: service: " + var1.getMethod());
+        PrintWriter var3 = var2.getWriter();
+        var3.write("Sss: service: " + var1.getMethod() + "\n");
+        var3.write("Server name: " + var1.getServerName() + "\n");
+        var3.write("Addr: " + var1.getRemoteAddr() + " Port: " + var1.getRemotePort() + "\n\n");
+        var3.write(this.showRequest(var1) + "\n");
+        super.service(var1, var2);
+    }
+
+    private String showRequest(HttpServletRequest var1) throws ServletException, IOException {
+        StringBuilder var2 = new StringBuilder();
+        var2.append(var1.getMethod() + " ");
+        var2.append(var1.getRequestURL() + " ");
+        var2.append(var1.getProtocol() + "\n");
+        Enumeration var3 = var1.getHeaderNames();
+
+        while(var3.hasMoreElements()) {
+            String var4 = (String)var3.nextElement();
+            var2.append(var4 + ": " + var1.getHeader(var4) + "\n");
+        }
+
+        return var2.toString();
     }
 }

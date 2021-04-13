@@ -1,0 +1,34 @@
+<project name="Lab13" default = "copy">
+    <target name="init">
+        <echo message="Lab13" />
+        <property name = "server" value = "C:\Program Files\Apache Software Foundation\Tomcat 9.0\" />
+        <property name = "serverRemote" value = "\\172.16.193.69\" />
+        <property name = "work"  value = "F:\3k2sem\PI\lab13\" />
+    </target>
+    <target name="compile" depends ="init">
+        <javac includeantruntime="false" srcdir= "${work}src" destdir = "${work}src\build">
+            <classpath>
+                <fileset file= "${server}lib\servlet-api.jar" />
+
+
+                <fileset file="${server}lib\commons-httpclient-3.1.jar"/>
+            </classpath>
+        </javac>
+    </target>
+    <target name="create" depends ="compile">
+        <delete  dir= "${server}webapps\AS_3022CYS133\" />
+        <mkdir   dir= "${server}webapps\AS_3022CYS133\" />
+        <mkdir   dir= "${server}webapps\AS_3022CYS133\WEB-INF" />
+
+
+    </target>
+    <target name="copy" depends ="create">
+        <copy file= "${work}src\WEB-INF\web.xml" todir="${server}webapps\AS_3022CYS133\\WEB-INF\" />
+        <copy file= "${work}src\index.html" todir="${server}webapps\AS_3022CYS133\"/>
+        <copy file= "${work}src\htmlFromServlet.html" todir="${server}webapps\AS_3022CYS133\"/>
+        <copy todir="${server}webapps\AS_3022CYS133\WEB-INF\classes">
+            <fileset dir="${work}src\build"/>
+        </copy>
+
+    </target>
+</project>
