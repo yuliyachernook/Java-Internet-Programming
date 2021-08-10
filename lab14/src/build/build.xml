@@ -1,0 +1,65 @@
+<project name="Lab14" default = "copy" >
+    <target name="init">
+        <echo message="Build Lab14 Project" />
+        <property name = "server"
+                  value = "C:\Program Files\Apache Software Foundation\Tomcat 9.0\" />
+        <property name = "serverRemote" value = "\\172.16.193.69\" />
+        <property name = "work"
+                  value = "D:\3k2sem\PI\lab14\" />
+        <property name = "server_lib"
+                  value = "C:\Program Files (x86)\Apache Software Foundation\Tomcat 9.0\lib" />
+    </target>
+    <target name="compile" depends ="init">
+        <javac target="1.8" srcdir = "${work}src"
+               destdir = "${work}src\build" includeantruntime="false">
+            <classpath>
+                <fileset file="${server}lib\servlet-api.jar"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="create" depends ="compile">
+        <delete dir= "${server}webapps\AS3022_CYS14\" />
+        <mkdir dir= "${server}webapps\AS3022_CYS14\" />
+        <mkdir dir= "${server}webapps\AS3022_CYS14\WEB-INF" />
+
+        <delete dir= "${serverRemote}webapps\AS_3022CYS\" />
+        <mkdir dir= "${serverRemote}webapps\AS_3022CYS\" />
+        <mkdir dir= "${serverRemote}webapps\AS_3022CYS\WEB-INF" />
+
+    </target>
+
+    <target name="copy" depends ="create">
+        <copy file= "${work}WEB-INF\web.xml"
+              todir="${server}webapps\AS3022_CYS14\WEB-INF\" />
+        <copy file= "D:\3k2sem\PI\lab14\index.jsp"
+              todir="${server}webapps\AS3022_CYS14\" />
+        <copy file= "D:\3k2sem\PI\lab14\afternoon.jsp"
+              todir="${server}webapps\AS3022_CYS14\" />
+        <copy file= "D:\3k2sem\PI\lab14\evening.jsp"
+              todir="${server}webapps\AS3022_CYS14\" />
+        <copy file= "D:\3k2sem\PI\lab14\morning.jsp"
+              todir="${server}webapps\AS3022_CYS14\" />
+        <copy file= "D:\3k2sem\PI\lab14\night.jsp"
+              todir="${server}webapps\AS3022_CYS14\" />
+        <copy todir="${server}webapps\AS3022_CYS14\WEB-INF\classes">
+            <fileset dir="${work}src\build"/>
+        </copy>
+
+        <copy file= "${work}WEB-INF\web.xml"
+              todir="${serverRemote}webapps\AS_3022CYS\WEB-INF\" />
+        <copy file= "D:\3k2sem\PI\lab14\index.jsp"
+              todir="${serverRemote}webapps\AS_3022CYS\" />
+        <copy file= "D:\3k2sem\PI\lab14\afternoon.jsp"
+              todir="${serverRemote}webapps\AS_3022CYS\" />
+        <copy file= "D:\3k2sem\PI\lab14\evening.jsp"
+              todir="${serverRemote}webapps\AS_3022CYS\" />
+        <copy file= "D:\3k2sem\PI\lab14\morning.jsp"
+              todir="${serverRemote}webapps\AS_3022CYS\" />
+        <copy file= "D:\3k2sem\PI\lab14\night.jsp"
+              todir="${serverRemote}webapps\AS_3022CYS\" />
+        <copy todir="${serverRemote}webapps\AS_3022CYS\WEB-INF\classes">
+            <fileset dir="${work}src\build"/>
+        </copy>
+    </target>
+</project>
