@@ -1,0 +1,46 @@
+<project name="AS_3022CYS" default = "copy" >
+    <target name="init">
+        <echo message="Building AS_3022CYS Project" />
+        <property name = "server"
+                  value = "C:\Program Files\Apache Software Foundation\Tomcat 9.0\" />
+        <property name = "work"
+                  value = "F:\3k2sem\PI\lab25\" />
+    </target>
+
+    <target name="compile" depends ="init">
+        <delete verbose ="true">
+            <fileset dir="${work}build"/>
+        </delete>
+        <javac srcdir    = "${work}src" destdir   = "${work}build">
+            <classpath>
+                <fileset dir= "${work}lib\" />
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="create" depends ="compile">
+        <delete dir= "${server}webapps\AS_3022CYS25\" />
+        <mkdir dir= "${server}webapps\AS_3022CYS25\" />
+        <mkdir dir= "${server}webapps\AS_3022CYS25\image" />
+<!--        <mkdir dir= "${server}webapps\Lab15\WEB-INF" />-->
+    </target>
+
+    <target name="copy" depends ="create">
+        <copy file= "${work}\src\main\webapp\WEB-INF\web.xml"
+              todir="${server}webapps\AS_3022CYS25\WEB-INF\" />
+<!--        <copy file= "${work}labTag.tld"-->
+<!--              todir="${server}webapps\Lab15\WEB-INF" />-->
+        <copy file= "${work}index.html"
+              todir="${server}webapps\AS_3022CYS25\" />
+        <copy todir="${server}webapps\AS_3022CYS25\WEB-INF\lib">
+            <fileset dir="${work}lib"/>
+        </copy>
+        <copy todir="${server}webapps\AS_3022CYS25\">
+            <fileset dir="${work}jsp"/>
+        </copy>
+        <copy todir="${server}webapps\AS_3022CYS25\WEB-INF\classes">
+            <fileset dir="${work}build"/>
+        </copy>
+    </target>
+
+</project>

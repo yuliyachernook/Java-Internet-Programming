@@ -1,0 +1,35 @@
+<project name="AS_3022CYS" default="copy">
+
+    <target name="init">
+        <echo message="Building AS_3022CYS Project" />
+        <property name="app" value="F:\3k2sem\PI\Lab21\src\main"/>
+        <property name="server" value="C:\Program Files\Apache Software Foundation\Tomcat 9.0"/>
+    </target>
+
+    <target name="compile" depends="init">
+        <delete verbose="true">
+            <fileset dir="${app}\webapp\WEB-INF\classes"/>
+        </delete>
+        <javac srcdir="${app}\java\"
+               destdir="${app}\webapp\WEB-INF\classes"
+               includeantruntime="false"
+        >
+            <classpath>
+                <file name="${server}\lib\servlet-api.jar"/>
+                <file name="${server}\lib\commons-httpclient-3.1.jar"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="create" depends ="compile" >
+        <delete dir="${server}\webapps\AS_3022CYS21\" />
+        <mkdir dir= "${server}\webapps\AS_3022CYS21\" />
+    </target>
+
+    <target name="copy" depends ="create">
+        <copy todir="${server}\webapps\AS_3022CYS21\" >
+            <fileset dir="${app}\webapp" includes="**"/>
+        </copy>
+    </target>
+
+</project>

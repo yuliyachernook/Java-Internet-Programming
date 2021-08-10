@@ -1,0 +1,41 @@
+<project name="AS_3022CYS" default = "copy" >
+<target name="init">     
+	<echo message="Building AS_3022CYS Project" />
+	<property name = "server"
+		value = "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\AS_3022CYS23\" />
+	<property name = "work"
+		value = "F:\3k2sem\PI\lab_23\" />
+</target> 
+
+<target name="compile" depends ="init">
+	<delete verbose ="true">
+		<fileset dir="${work}build"/>
+	</delete>
+	<javac srcdir    = "${work}src" destdir   = "${work}build">
+		<classpath>
+			<fileset dir= "C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\" />
+		</classpath>
+	</javac>
+</target>
+
+<target name="create" depends ="compile">
+	<delete dir= "${server}" />
+	<mkdir dir= "${server}" />
+	<mkdir dir= "${server}WEB-INF" />
+	<mkdir dir= "${server}WEB-INF\lib" />
+	<mkdir dir= "${server}WEB-INF\classes" />
+</target>
+
+<target name="copy" depends ="create">
+	<copy file= "${work}WEB-INF\web.xml"
+          todir="${server}WEB-INF" />
+	<copy todir="${server}" >
+		<fileset dir="${work}jsp"/>
+	</copy>
+
+	<copy todir="${server}WEB-INF\classes">
+		 <fileset dir="${work}build"/>
+	</copy>
+</target>
+
+</project>

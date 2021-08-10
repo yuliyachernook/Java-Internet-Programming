@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0fb979c4-f59a-4fc3-84ed-d91c0e62b57a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../lab16_17/src/main/java/Sss.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab16_17/src/main/webapp/ant/build.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Sss_Header.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Sss_JSON.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Sss_XML.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/XXRand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab22/jsp/errlogin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab22/jsp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab22/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab13/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab13/lab13.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/lab13.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab13/src/build/Ggg1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/src/build/Ggg1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab13/src/build/Sss1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/src/build/Sss1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab13/src/build/Sss2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/src/build/Sss2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab13/src/build/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/src/build/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab13/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab13/src/main/java/Ggg1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/src/main/java/Ggg1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab13/src/main/java/Ggg2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/src/main/java/Ggg2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab13/src/main/java/Ggg3_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/src/main/java/Ggg3_5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab13/src/main/java/Sss1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/src/main/java/Sss1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab13/src/main/java/Sss2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/src/main/java/Sss2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab13/src/main/java/Sss7.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/src/main/java/Sss7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/lab6.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/out/production/lab6/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/out/production/lab6/p1/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/out/production/lab6/p1/p2/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/out/production/lab6/p1/p2/p3/AAA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/src/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/src/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/src/p1/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/src/p1/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/src/p1/p2/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/src/p1/p2/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/src/p1/p2/p3/AAA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/src/p1/p2/p3/AAA.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1sk8YXq3aAWTKSpsF9nCFMj24bf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab22" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Lab21" type="AntRunConfiguration">
+      <antsettings antfile="file://$PROJECT_DIR$/build.xml" target="copy" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0fb979c4-f59a-4fc3-84ed-d91c0e62b57a" name="Default Changelist" comment="" />
+      <created>1621405280059</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621405280059</updated>
+      <workItem from="1621405281708" duration="8682000" />
+      <workItem from="1622228357402" duration="374000" />
+      <workItem from="1622271153445" duration="1625000" />
+      <workItem from="1622566084274" duration="47000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,50 @@
+<project name="AS_3022CYS" default = "copy" >
+
+    <target name="init">
+        <echo message="Building AS_3022CYS Project" />
+        <property name = "server"
+                  value = "C:\Program Files\Apache Software Foundation\Tomcat 9.0\" />
+        <property name = "serverRemote"
+                  value = "\\172.16.193.69\" />
+        <property name = "work"
+                  value = "F:\3k2sem\PI\lab20\" />
+    </target>
+
+    <target name="compile" depends ="init">
+        <javac srcdir = "${work}src"
+               destdir = "${work}\build">
+            <classpath>
+                <fileset dir= "${server}lib\" />
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="create" depends ="compile">
+        <delete dir= "${server}webapps\AS_3022CYS20\" />
+        <mkdir dir= "${server}webapps\AS_3022CYS20\" />
+        <mkdir dir= "${server}webapps\AS_3022CYS20\WEB-INF" />
+
+        <delete dir= "${serverRemote}webapps\AS_3022CYS\" />
+        <mkdir dir= "${serverRemote}webapps\AS_3022CYS\" />
+        <mkdir dir= "${serverRemote}webapps\AS_3022CYS\WEB-INF" />
+    </target>
+
+    <target name="copy" depends ="create">
+        <copy file= "${work}web\WEB-INF\web.xml"
+              todir="${server}webapps\AS_3022CYS20\WEB-INF\" />
+        <copy file= "${work}web\index.html"
+              todir="${server}webapps\AS_3022CYS20\" />
+        <copy todir="${server}webapps\AS_3022CYS20\WEB-INF\classes">
+            <fileset dir="${work}build"/>
+        </copy>
+
+        <copy file= "${work}web\WEB-INF\web.xml"
+              todir="${serverRemote}webapps\AS_3022CYS\WEB-INF\" />
+        <copy file= "${work}web\index.html"
+              todir="${serverRemote}webapps\AS_3022CYS\" />
+        <copy todir="${serverRemote}webapps\AS_3022CYS\WEB-INF\classes">
+            <fileset dir="${work}build"/>
+        </copy>
+
+    </target>
+</project>
